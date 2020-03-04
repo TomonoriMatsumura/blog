@@ -1,2 +1,304 @@
-<!doctype html><html class=no-js><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Posts &#183; ソリューリョンログ</title><meta name=author><meta name=description content="The awesome blog of John Doe."><meta name=generator content="Hugo 0.65.3"><link href=/blog/posts/index.xml rel=alternate type=application/rss+xml title=ソリューリョンログ><link href=/blog/posts/index.xml rel=feed type=application/rss+xml title=ソリューリョンログ><link href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" rel=stylesheet type=text/css><link rel=stylesheet href=https://tomonorimatsumura.github.io/blog/css/styles.css><link rel=icon href=https://tomonorimatsumura.github.io/blog/favicon.ico><link rel=apple-touch-icon href=https://tomonorimatsumura.github.io/blog/apple-touch-icon.png><link rel=stylesheet href=https://tomonorimatsumura.github.io/blog/css/highlightjs/monokai.css><script src=https://tomonorimatsumura.github.io/blog/js/vendor/modernizr-2.8.0.min.js></script><style>.site-header h2 .logo{background:url(https://tomonorimatsumura.github.io/blog/img/desk.jpg)no-repeat}@media(min--moz-device-pixel-ratio:1.3),(-o-min-device-pixel-ratio:2.6 / 2),(-webkit-min-device-pixel-ratio:1.3),(min-device-pixel-ratio:1.3),(min-resolution:1.3dppx){.site-header h2 .logo{background-image:url(https://tomonorimatsumura.github.io/blog/img/desk.jpg)}}.site-header{background:#2a373d url(https://tomonorimatsumura.github.io/blog/img/desk.jpg)no-repeat 50%;z-index:-1}</style></head><body><header class=site-header><div class=transparent-layer><h2>ソリューションログ2</h2></div></header><div class="container clearfix"><main role=main class=content><a class="btn home" href=https://tomonorimatsumura.github.io/blog/ title="Back to home">&#171; Back to home</a><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1331/ title=Jenkinsでジョブの設定を一気に書き換える>Jenkinsでジョブの設定を一気に書き換える</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.09.26>2017.09.26</time></span></footer><p>書き換え find /var/lib/jenkins/jobs -type f -name config.xml -print0 | xargs -0 sed -i "s/git clone-b jenkins-test/git clone -b topic/g" ドライラン(iオプションを無くす) find /var/lib/jenkins/jobs -type f -name config.xml -print0 | xargs -0 sed "s/git clone-b jenkins-test/git clone -b topic/g" 参考サイト 備忘録: [unix] スペース&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1331/ title=Jenkinsでジョブの設定を一気に書き換える>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1320/ title=CentOS7でJenkinsをバックアップ、リストアする>CentOS7でJenkinsをバックアップ、リストアする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.09.14>2017.09.14</time></span></footer><p>Jenkinsバックアップデータを作成する # Jenkins稼働サーバで systemctl stop jenkins git clone <a href=https://github.com/sue445/jenkins-backup-script.git>https://github.com/sue445/jenkins-backup-script.git</a> bash jenkins-backup.sh /path/to/jenkins archives.tar.gz Jenkinsをリストアする # Jenkinsを停止&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1320/ title=CentOS7でJenkinsをバックアップ、リストアする>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1317/ title=CentOS7へJenkinsをインストールする>CentOS7へJenkinsをインストールする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.09.14>2017.09.14</time></span></footer><p>Jenkinsをインストールする # Javaをインストールする yum install java # yumリポジトリにjenkinsのリポジトリを追加する wget -O /etc/yum.repos.d/jenkins.repo <a href=http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo>http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo</a> rpm &ndash;import <a href=https://jenkins-ci.org/redhat/jenkins-ci.org.key>https://jenkins-ci.org/redhat/jenkins-ci.org.key</a> # J&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1317/ title=CentOS7へJenkinsをインストールする>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1312/ title=CentOS7でRedmineをバックアップ、リストアする>CentOS7でRedmineをバックアップ、リストアする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.09.14>2017.09.14</time></span></footer><p>Redmineをバックアップをする # 作業用ディレクトリへcdする cd /tmp # Gitリポジトリをアーカイブする tar cfv git.tar /var/git/ # Redmineメディアファイ&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1312/ title=CentOS7でRedmineをバックアップ、リストアする>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1309/ title="HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする">HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.07.03>2017.07.03</time></span></footer><p>CentOS7を設定する # フォントを大きくする setfont sun12x22 # インターネットへ接続する nmtui # GNOME デスクトップをインストールする yum groupinstall "GNOME Desktop" # nVIDIAグラフ&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1309/ title="HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする">Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1295/ title=Ansibleで環境変数を取得する>Ansibleで環境変数を取得する</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.05.04>2017.05.04</time></span></footer><p>Ansibleでデバグを行う際に環境変数を調べる必要が出てきた。 環境変数を取得する コマンド ansible -m setup hostname # VPSに最初に接続する例 # インベントリー&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1295/ title=Ansibleで環境変数を取得する>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1293/ title=Historyコマンドからコマンド利用頻度を調べる>Historyコマンドからコマンド利用頻度を調べる</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.04.22>2017.04.22</time></span></footer><p>history | awk "{print $2}" | sort | uniq -c | sort -n -r -k1&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1293/ title=Historyコマンドからコマンド利用頻度を調べる>Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1250/ title="さくらのVPSにFreeBSD 9.3をインストールする">さくらのVPSにFreeBSD 9.3をインストールする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.03.19>2017.03.19</time></span></footer><p>ISOイメージをVPSへアップロードする クライアントマシーン（CentOS7）にlsftpをインストールする。 yum install lftp FreeBSDのアーカイ&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1250/ title="さくらのVPSにFreeBSD 9.3をインストールする">Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1239/ title="Lenovo G580にCentOS7をインストールする">Lenovo G580にCentOS7をインストールする</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.03.05>2017.03.05</time></span></footer><p>Bootメディアを作成する SDカードを利用する。CentOSのサイトより Everything ISO イメージをダウンロードしSDカードへコピーする。SDカードはNT&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1239/ title="Lenovo G580にCentOS7をインストールする">Read more &#187;</a></article><article class=post><h1><a href=https://tomonorimatsumura.github.io/blog/p1231/ title=Gitリポジトリをcloneしてpushするまでの流れ>Gitリポジトリをcloneしてpushするまでの流れ</a></h1><footer class=post-info>Posted on <span class=post-meta><time datetime=2017.02.24>2017.02.24</time></span></footer><p>クライアント側の設定をする クライアント側では最低限「user.name」および「user.email」を設定しておく。 # 現在の設定を確認する&mldr;</p><a href=https://tomonorimatsumura.github.io/blog/p1231/ title=Gitリポジトリをcloneしてpushするまでの流れ>Read more &#187;</a></article><div class=pagination><nav><p class=counter>Page 1 of 16</p><a class="btn older" href=/blog/posts/page/2/ title=Older>Older &#187;</a></nav></div></main><aside class=author><img class=profile-image src=https://tomonorimatsumura.github.io/blog/img/profile.jpeg width=70 height=70 alt="Matsumura Tomonori"><p class=name>by
-<strong>Matsumura Tomonori</strong></p><p class=address>Earth</p><p class=link></p><ul class=social><li><a href=//twitter.com/ma2muratomonori class=icon-twitter target=_blank title=Twitter></a></li><li><a href=//github.com/TomonoriMatsumura class=icon-github target=_blank title=Github></a></li><li><a href=https://tomonorimatsumura.github.io/blog/post/index.xml class=icon-rss target=_blank title=RSS></a></li></ul><br><br></aside></div><footer class=main-footer><div class="container clearfix"><a class=icon-rss href=https://tomonorimatsumura.github.io/blog/post/index.xml title=RSS></a><p>&copy; 2020 &#183; Powered by <a href=http://gohugo.io>Hugo</a>.</p></div></footer><script src=//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js></script><script>hljs.initHighlightingOnLoad();</script><script>window.jQuery||document.write('<script src="https:\/\/tomonorimatsumura.github.io\/blog\/js\/vendor\/jquery-1.11.0.min.js"><\/script>')</script><script src=https://tomonorimatsumura.github.io/blog/js/plugins.js></script></body></html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>ソリューリョンログ</title><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui"><meta name=renderer content="webkit"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta name=format-detection content="telephone=no,email=no,adress=no"><meta name=theme-color content="#000000"><meta http-equiv=window-target content="_top"><meta name=generator content="Hugo 0.66.0 with theme pure"><title>ソリューリョンログ</title><link rel=alternate type=application/rss+xml href=https://tomonorimatsumura.github.io/blog/posts/index.xml title=ソリューリョンログ><link rel=stylesheet href=https://tomonorimatsumura.github.io/blog/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css><link rel=stylesheet href=https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css async><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css async><meta property="og:title" content="Posts"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://tomonorimatsumura.github.io/blog/posts/"><meta property="og:updated_time" content="2017-09-26T17:00:20+00:00"><meta itemprop=name content="Posts"><meta itemprop=description content><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content><meta name=twitter:site content="@ma2muratomonori"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head></head><body class=main-center itemscope itemtype=http://schema.org/WebPage><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=slimContent><div class=navbar-header><div class=search id=search-form-wrap><form class="search-form sidebar-form"><div class=input-group><input type=text class="search-form-input form-control" placeholder=Search>
+<span class=input-group-btn><button type=submit class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button></span></div><div class=ins-search><div class=ins-search-mask></div><div class=ins-search-container><div class=ins-input-wrapper><input type=text class=ins-search-input placeholder="Type something..." x-webkit-speech>
+<button type=button class="close ins-close ins-selectable" data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button></div><div class=ins-section-wrapper><div class=ins-section-container></div></div></div></div></form></div><button class="navbar-toggle collapsed" type=button data-toggle=collapse data-target=#main-navbar aria-controls=main-navbar aria-expanded=false>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button></div><nav id=main-navbar class="collapse navbar-collapse" itemscope itemtype=http://schema.org/SiteNavigationElement role=navigation><ul class="nav navbar-nav main-nav"></ul></nav></div></header><main class=main role=main><article class="content article article-archives article-type-list" itemscope><header class=article-header><h1 itemprop=title>Posts</h1><p class=text-muted>Total 152 articles</p></header><div class=article-body><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2017 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2017</a></h3></div><div id=collapse2017 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2017><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p1331/ class=collection-item itemprop=url target=_blank><time datetime="2017-09-26 17:00:20 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-09-26
+</time>Jenkinsでジョブの設定を一気に書き換える
+</a><a href=https://tomonorimatsumura.github.io/blog/p1320/ class=collection-item itemprop=url target=_blank><time datetime="2017-09-14 13:29:22 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-09-14
+</time>CentOS7でJenkinsをバックアップ、リストアする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1317/ class=collection-item itemprop=url target=_blank><time datetime="2017-09-14 12:51:12 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-09-14
+</time>CentOS7へJenkinsをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1312/ class=collection-item itemprop=url target=_blank><time datetime="2017-09-14 12:30:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-09-14
+</time>CentOS7でRedmineをバックアップ、リストアする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1309/ class=collection-item itemprop=url target=_blank><time datetime="2017-07-03 15:09:29 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-07-03
+</time>HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1295/ class=collection-item itemprop=url target=_blank><time datetime="2017-05-04 08:09:27 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-05-04
+</time>Ansibleで環境変数を取得する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1293/ class=collection-item itemprop=url target=_blank><time datetime="2017-04-22 14:43:51 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-04-22
+</time>Historyコマンドからコマンド利用頻度を調べる
+</a><a href=https://tomonorimatsumura.github.io/blog/p1250/ class=collection-item itemprop=url target=_blank><time datetime="2017-03-19 09:11:45 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-03-19
+</time>さくらのVPSにFreeBSD 9.3をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1239/ class=collection-item itemprop=url target=_blank><time datetime="2017-03-05 16:20:48 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-03-05
+</time>Lenovo G580にCentOS7をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1231/ class=collection-item itemprop=url target=_blank><time datetime="2017-02-24 13:48:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-02-24
+</time>Gitリポジトリをcloneしてpushするまでの流れ
+</a><a href=https://tomonorimatsumura.github.io/blog/p1227/ class=collection-item itemprop=url target=_blank><time datetime="2017-02-14 11:14:12 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-02-14
+</time>sedで文字列を置換する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1223/ class=collection-item itemprop=url target=_blank><time datetime="2017-02-14 10:48:26 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-02-14
+</time>Seleniumでコマンドラインでページソースを取得する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1216/ class=collection-item itemprop=url target=_blank><time datetime="2017-02-14 10:11:31 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-02-14
+</time>Seleniumでコマンドラインでページタイトルを取得する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1206/ class=collection-item itemprop=url target=_blank><time datetime="2017-01-28 13:33:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2017-01-28
+</time>CentOS7でSeleniumをDockerコンテナで利用する</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2016 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2016</a></h3></div><div id=collapse2016 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2016><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p1201/ class=collection-item itemprop=url target=_blank><time datetime="2016-12-18 14:52:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-12-18
+</time>CentOS7にSeleniuimをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1197/ class=collection-item itemprop=url target=_blank><time datetime="2016-08-22 09:43:47 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-08-22
+</time>CentOS7でUSBHDD（NTFS）をマウントする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1174/ class=collection-item itemprop=url target=_blank><time datetime="2016-03-06 11:34:43 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-03-06
+</time>CentOS7にVirtualBox + vagrantをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1168/ class=collection-item itemprop=url target=_blank><time datetime="2016-03-06 11:32:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-03-06
+</time>さくらのVPSにVirtualBox + vagrantをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1165/ class=collection-item itemprop=url target=_blank><time datetime="2016-02-02 17:25:23 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-02-02
+</time>CentOS7でDockerを使いRedmineを立ち上げる
+</a><a href=https://tomonorimatsumura.github.io/blog/p1156/ class=collection-item itemprop=url target=_blank><time datetime="2016-01-27 08:15:14 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-01-27
+</time>CentOS7でAnsibleを利用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1134/ class=collection-item itemprop=url target=_blank><time datetime="2016-01-18 14:22:30 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-01-18
+</time>CentOS7へRuby2.3とRails4をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1122/ class=collection-item itemprop=url target=_blank><time datetime="2016-01-12 06:48:12 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-01-12
+</time>CentOS7へownCloudをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1117/ class=collection-item itemprop=url target=_blank><time datetime="2016-01-02 11:47:00 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-01-02
+</time>CentOS7へNVIDIAグラフィックスドライバをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1113/ class=collection-item itemprop=url target=_blank><time datetime="2016-01-02 10:08:19 +0000 UTC" itemprop=datePublished style=margin-right:5px>2016-01-02
+</time>CentOS7で動画を閲覧する</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2015 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2015</a></h3></div><div id=collapse2015 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2015><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p1106/ class=collection-item itemprop=url target=_blank><time datetime="2015-12-19 19:05:22 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-12-19
+</time>Dockerでコンテナの名前を調べる
+</a><a href=https://tomonorimatsumura.github.io/blog/p1101/ class=collection-item itemprop=url target=_blank><time datetime="2015-12-16 10:00:23 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-12-16
+</time>Gitリポジトリを移設する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1096/ class=collection-item itemprop=url target=_blank><time datetime="2015-12-01 16:15:05 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-12-01
+</time>CentOS7でWindows Zipアーカイブを解凍する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1093/ class=collection-item itemprop=url target=_blank><time datetime="2015-12-01 14:37:59 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-12-01
+</time>CentOS7でmod_encodingを利用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1088/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-17 16:14:59 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-17
+</time>Linuxでtarで解凍圧縮する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1084/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-17 13:59:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-17
+</time>CentOS7でSSHを秘密鍵公開鍵を使って設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1080/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-17 13:18:29 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-17
+</time>awkでSSHアクセス履歴を調べる
+</a><a href=https://tomonorimatsumura.github.io/blog/p1075/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-16 15:38:58 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-16
+</time>CentOS7でmod_userdirを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1072/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-10 15:13:13 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-10
+</time>CentOS7でrarコマンドを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1067/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-08 10:41:11 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-08
+</time>CentOS7にFTPサーバを構築する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1065/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-08 04:03:13 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-08
+</time>CentOS7へFilezillaをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1060/ class=collection-item itemprop=url target=_blank><time datetime="2015-11-07 13:14:21 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-11-07
+</time>CentOS6でPDFにパスワードを掛ける
+</a><a href=https://tomonorimatsumura.github.io/blog/p1038/ class=collection-item itemprop=url target=_blank><time datetime="2015-10-29 17:09:54 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-10-29
+</time>さくらのVPSにインストールしたCentOS7でVNCを利用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1030/ class=collection-item itemprop=url target=_blank><time datetime="2015-10-29 13:39:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-10-29
+</time>CentOS7でGnome Terminalにショートカットキーを設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1027/ class=collection-item itemprop=url target=_blank><time datetime="2015-10-03 12:43:59 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-10-03
+</time>CentOS7のディスクイメージを作成する
+</a><a href=https://tomonorimatsumura.github.io/blog/p1022/ class=collection-item itemprop=url target=_blank><time datetime="2015-09-15 16:57:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-09-15
+</time>CentOS7にPHP5.6をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1018/ class=collection-item itemprop=url target=_blank><time datetime="2015-08-11 04:47:03 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-08-11
+</time>CentOS7にffmpegをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p1003/ class=collection-item itemprop=url target=_blank><time datetime="2015-08-11 03:47:53 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-08-11
+</time>Windows7にVirtualBoxをインストールしCentOS7をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p999/ class=collection-item itemprop=url target=_blank><time datetime="2015-06-23 17:21:35 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-06-23
+</time>Poderosaで『unknown terminal type.』エラーが出た時の対応
+</a><a href=https://tomonorimatsumura.github.io/blog/p990/ class=collection-item itemprop=url target=_blank><time datetime="2015-05-29 13:38:28 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-05-29
+</time>Windows7にGitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p985/ class=collection-item itemprop=url target=_blank><time datetime="2015-05-28 13:06:32 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-05-28
+</time>RedmineとGitの連携についてのメモ
+</a><a href=https://tomonorimatsumura.github.io/blog/p979/ class=collection-item itemprop=url target=_blank><time datetime="2015-04-27 12:21:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-04-27
+</time>CentOS6.6にffmpegをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p977/ class=collection-item itemprop=url target=_blank><time datetime="2015-04-27 09:37:08 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-04-27
+</time>ImageMagicで画像ファイルをPDF化する
+</a><a href=https://tomonorimatsumura.github.io/blog/p974/ class=collection-item itemprop=url target=_blank><time datetime="2015-03-22 09:25:22 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-03-22
+</time>iPhoneのデータを抜き出す
+</a><a href=https://tomonorimatsumura.github.io/blog/p970/ class=collection-item itemprop=url target=_blank><time datetime="2015-01-04 04:17:44 +0000 UTC" itemprop=datePublished style=margin-right:5px>2015-01-04
+</time>iPadにWindowsから写真を同期させる</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2014 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2014</a></h3></div><div id=collapse2014 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2014><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p965/ class=collection-item itemprop=url target=_blank><time datetime="2014-12-17 20:05:38 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-12-17
+</time>CentOSで外付けHDDにカレントディレクトリを移動する
+</a><a href=https://tomonorimatsumura.github.io/blog/p961/ class=collection-item itemprop=url target=_blank><time datetime="2014-12-15 11:01:13 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-12-15
+</time>awkでファイル名とファイルサイズを表示する
+</a><a href=https://tomonorimatsumura.github.io/blog/p954/ class=collection-item itemprop=url target=_blank><time datetime="2014-08-17 16:00:23 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-08-17
+</time>CentOS6.5でディスプレーの解像度を変更する
+</a><a href=https://tomonorimatsumura.github.io/blog/p951/ class=collection-item itemprop=url target=_blank><time datetime="2014-07-02 07:39:34 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-07-02
+</time>さくらのVPSにVirtualBox + vagrantをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p943/ class=collection-item itemprop=url target=_blank><time datetime="2014-05-07 10:28:34 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-05-07
+</time>LibreOfficeを日本語化する
+</a><a href=https://tomonorimatsumura.github.io/blog/p941/ class=collection-item itemprop=url target=_blank><time datetime="2014-05-05 07:51:53 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-05-05
+</time>CentOS6.5にLibreOffice Baseをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p938/ class=collection-item itemprop=url target=_blank><time datetime="2014-05-01 15:21:43 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-05-01
+</time>CentOS6.5にVMWare Playerをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p930/ class=collection-item itemprop=url target=_blank><time datetime="2014-03-21 13:17:39 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-03-21
+</time>PHPを再インストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p914/ class=collection-item itemprop=url target=_blank><time datetime="2014-01-01 17:42:18 +0000 UTC" itemprop=datePublished style=margin-right:5px>2014-01-01
+</time>Redmine2.4をCentOS6.4にインストールする</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2013 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2013</a></h3></div><div id=collapse2013 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2013><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p907/ class=collection-item itemprop=url target=_blank><time datetime="2013-12-11 03:23:04 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-12-11
+</time>Virtual BoxにインストールしたCentOS6.4でネットワークを設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p899/ class=collection-item itemprop=url target=_blank><time datetime="2013-11-05 03:35:05 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-11-05
+</time>Calc、Baseの項目行を画面上で固定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p889/ class=collection-item itemprop=url target=_blank><time datetime="2013-10-20 11:11:30 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-10-20
+</time>Gitで常に除外したい設定を.gitconfig で設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p883/ class=collection-item itemprop=url target=_blank><time datetime="2013-10-06 09:14:58 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-10-06
+</time>CentOSでサーバの時刻設定を行う
+</a><a href=https://tomonorimatsumura.github.io/blog/p874/ class=collection-item itemprop=url target=_blank><time datetime="2013-10-04 04:25:41 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-10-04
+</time>LibreOfficeからMySQLに接続する
+</a><a href=https://tomonorimatsumura.github.io/blog/p871/ class=collection-item itemprop=url target=_blank><time datetime="2013-10-01 07:09:38 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-10-01
+</time>CentOS6.4にLibreOfficeをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p867/ class=collection-item itemprop=url target=_blank><time datetime="2013-09-18 13:51:59 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-09-18
+</time>CentOSで拡張子RARをUnRARをインストールし解凍する方法・コマンド
+</a><a href=https://tomonorimatsumura.github.io/blog/p861/ class=collection-item itemprop=url target=_blank><time datetime="2013-09-15 16:03:34 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-09-15
+</time>さくらのVPSにCentOS6.4 i386をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p859/ class=collection-item itemprop=url target=_blank><time datetime="2013-09-15 07:49:49 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-09-15
+</time>Windows7でTigerVNCを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p854/ class=collection-item itemprop=url target=_blank><time datetime="2013-09-03 06:16:58 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-09-03
+</time>CentOS6にChromiumをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p832/ class=collection-item itemprop=url target=_blank><time datetime="2013-07-15 13:47:40 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-07-15
+</time>EclipseでPerl::Tidyを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p826/ class=collection-item itemprop=url target=_blank><time datetime="2013-07-15 04:18:05 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-07-15
+</time>EclipseにEPIC | Eclipse Perl Integrarionをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p822/ class=collection-item itemprop=url target=_blank><time datetime="2013-07-12 15:17:47 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-07-12
+</time>.htaccessでディレクトリのファイル一覧を表示させる
+</a><a href=https://tomonorimatsumura.github.io/blog/p818/ class=collection-item itemprop=url target=_blank><time datetime="2013-06-19 10:31:27 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-06-19
+</time>iPhone、iPadのWi-fi接続設定
+</a><a href=https://tomonorimatsumura.github.io/blog/p812/ class=collection-item itemprop=url target=_blank><time datetime="2013-05-02 15:48:07 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-05-02
+</time>Chromeでホスト名ごとにズーム設定を記憶する機能を追加する
+</a><a href=https://tomonorimatsumura.github.io/blog/p807/ class=collection-item itemprop=url target=_blank><time datetime="2013-05-02 15:37:24 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-05-02
+</time>CentOS6にChromeをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p797/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-31 11:49:29 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-31
+</time>さくらのスタンダードにRedmineをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p787/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-25 01:42:01 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-25
+</time>さくらのVPSのCentOSにVMWare Player + Windows XPをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p782/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-20 13:49:05 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-20
+</time>CentOS6で動画を閲覧する
+</a><a href=https://tomonorimatsumura.github.io/blog/p778/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-18 12:20:45 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-18
+</time>Redmineにテーマをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p770/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-18 11:50:45 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-18
+</time>CentOS6のApacheでmod_cacheを設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p758/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-16 16:27:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-16
+</time>CentOS6でApache、PHP、MySQLの初期設定を行う
+</a><a href=https://tomonorimatsumura.github.io/blog/p745/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-12 17:15:14 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-12
+</time>CentOS6でmod_userdirを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p739/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-12 15:22:52 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-12
+</time>EclipseにAptanaをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p729/ class=collection-item itemprop=url target=_blank><time datetime="2013-03-09 16:37:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-03-09
+</time>CentOSで6.3でを起動時にNum Lockを有効にする
+</a><a href=https://tomonorimatsumura.github.io/blog/p700/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-21 03:52:56 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-21
+</time>サーバの状態を確認する
+</a><a href=https://tomonorimatsumura.github.io/blog/p689/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-15 07:06:00 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-15
+</time>FireFoxでズームをドメイン毎に指定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p687/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-14 06:53:20 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-14
+</time>CentOS6でVNCをポートフォワーディングで接続する
+</a><a href=https://tomonorimatsumura.github.io/blog/p679/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-12 17:36:11 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-12
+</time>CentOS6でsuをほぼ無効にする
+</a><a href=https://tomonorimatsumura.github.io/blog/p674/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-12 08:07:33 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-12
+</time>EclipseにEgitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p670/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-11 20:08:50 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-11
+</time>IS06でテサリングをする
+</a><a href=https://tomonorimatsumura.github.io/blog/p667/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-09 10:59:14 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-09
+</time>Redmineのパフォーマンスチューニング
+</a><a href=https://tomonorimatsumura.github.io/blog/p663/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-03 02:22:14 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-03
+</time>公開鍵秘密鍵を設定する
+</a><a href=https://tomonorimatsumura.github.io/blog/p656/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-02 11:24:18 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-02
+</time>CentOS6を日本語環境にする
+</a><a href=https://tomonorimatsumura.github.io/blog/p653/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-02 11:16:38 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-02
+</time>CentOS6にFireFoxをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p646/ class=collection-item itemprop=url target=_blank><time datetime="2013-02-02 04:26:45 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-02-02
+</time>さくらのVPSでVNCを起動する
+</a><a href=https://tomonorimatsumura.github.io/blog/p640/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-27 11:31:02 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-27
+</time>ローカルで作成したGitリポジトリをリモートへプッシュする
+</a><a href=https://tomonorimatsumura.github.io/blog/p638/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-26 20:42:02 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-26
+</time>シェルスクリプトのテストを書く
+</a><a href=https://tomonorimatsumura.github.io/blog/p622/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-25 13:50:04 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-25
+</time>さくらのVPSで回線速度が遅くアクセスに時間がかかる
+</a><a href=https://tomonorimatsumura.github.io/blog/p618/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-22 05:37:29 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-22
+</time>CentOS6.3にVMware Playerをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p612/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-20 18:56:08 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-20
+</time>Gitメモ
+</a><a href=https://tomonorimatsumura.github.io/blog/p605/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-20 14:51:08 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-20
+</time>Redmineでチケットが新規作成出来ない
+</a><a href=https://tomonorimatsumura.github.io/blog/p596/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-20 07:52:40 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-20
+</time>Redmineのバージョンを確認する
+</a><a href=https://tomonorimatsumura.github.io/blog/p577/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-09 17:12:27 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-09
+</time>CentOS6.3にFTPサーバをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p568/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-08 10:34:00 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-08
+</time>RedmineのMy AccountでInternal Errorが出る
+</a><a href=https://tomonorimatsumura.github.io/blog/p548/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-05 04:29:24 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-05
+</time>CentOS6.3にEPELリポジトリを追加する
+</a><a href=https://tomonorimatsumura.github.io/blog/p542/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-05 04:04:21 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-05
+</time>CentOS6.3にRemiリポジトリをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p535/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-03 09:01:31 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-03
+</time>Windows7にVMware Player + CentOS6.3をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p521/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-02 10:09:03 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-02
+</time>Apacheでサーバ情報の隠蔽を行う
+</a><a href=https://tomonorimatsumura.github.io/blog/p519/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-02 06:15:18 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-02
+</time>cronを使うための準備
+</a><a href=https://tomonorimatsumura.github.io/blog/p516/ class=collection-item itemprop=url target=_blank><time datetime="2013-01-02 03:28:58 +0000 UTC" itemprop=datePublished style=margin-right:5px>2013-01-02
+</time>WordPressをPC閲覧用とスマホ閲覧用に分ける</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2012 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2012</a></h3></div><div id=collapse2012 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2012><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p463/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-31 08:02:40 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-31
+</time>CentOS6.3にWordPressをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p459/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-31 05:24:12 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-31
+</time>CentOS6.3でApache上でRedmineを実行する
+</a><a href=https://tomonorimatsumura.github.io/blog/p444/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-17 09:12:47 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-17
+</time>さくらのスタンダードにgitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p434/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-13 13:07:47 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-13
+</time>Subversionコマンドメモ
+</a><a href=https://tomonorimatsumura.github.io/blog/p429/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-11 05:20:29 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-11
+</time>Redmineを使ってプロジェクトを管理する
+</a><a href=https://tomonorimatsumura.github.io/blog/p419/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-09 11:08:13 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-09
+</time>Windwos7で公開鍵秘密鍵を発行する
+</a><a href=https://tomonorimatsumura.github.io/blog/p413/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-09 09:00:28 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-09
+</time>PEARに関する覚書き
+</a><a href=https://tomonorimatsumura.github.io/blog/p402/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-09 03:58:08 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-09
+</time>さくらのVPSにJenkins + PHPUnitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p395/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-08 17:22:48 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-08
+</time>CentOS6に最新バージョンのPHPをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p393/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-08 06:55:09 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-08
+</time>EclipseでPHPをリモートデバッグする
+</a><a href=https://tomonorimatsumura.github.io/blog/p383/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-07 16:28:58 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-07
+</time>EclipseでRemote System Explore(RSE)を使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p378/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-07 15:10:19 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-07
+</time>さくらのスタンダードでsftpを使う
+</a><a href=https://tomonorimatsumura.github.io/blog/p374/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-07 11:25:32 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-07
+</time>CentOS6で端末をショートカットキーで起動させる
+</a><a href=https://tomonorimatsumura.github.io/blog/p372/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-07 11:18:04 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-07
+</time>Eclipseで新規ソフトウェアのインストールでフリーズした時の対処法
+</a><a href=https://tomonorimatsumura.github.io/blog/p306/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-04 01:32:06 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-04
+</time>CentOS6.3でFileZillaを使用する
+</a><a href=https://tomonorimatsumura.github.io/blog/p290/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-02 11:59:34 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-02
+</time>CentOS6でSubversionからgitに移行する
+</a><a href=https://tomonorimatsumura.github.io/blog/p224/ class=collection-item itemprop=url target=_blank><time datetime="2012-12-01 16:03:12 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-12-01
+</time>EclipseでSVNのデータと比較すると文字化け
+</a><a href=https://tomonorimatsumura.github.io/blog/p201/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-30 15:59:15 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-30
+</time>CentOS6にJenkinsをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p199/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-30 13:05:11 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-30
+</time>WordPressの引越し
+</a><a href=https://tomonorimatsumura.github.io/blog/p195/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-28 14:27:48 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-28
+</time>capybara-webkitについて
+</a><a href=https://tomonorimatsumura.github.io/blog/p190/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-26 17:13:25 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-26
+</time>CentOS6.3にRedmine環境を構築する
+</a><a href=https://tomonorimatsumura.github.io/blog/p187/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-25 17:04:21 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-25
+</time>CentOS6に最新バージョンのMySQLとphpMyAdminをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p183/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-25 14:10:02 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-25
+</time>CentOS6にPECL::ssh2をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p174/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-18 12:47:03 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-18
+</time>Windows XPの再インストールメモ
+</a><a href=https://tomonorimatsumura.github.io/blog/p165/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-16 15:45:38 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-16
+</time>CentOS6にgitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p157/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-15 06:33:56 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-15
+</time>CentOS6にEclipse + Pleiades + PDTをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p143/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-12 14:23:27 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-12
+</time>CentOSでシステム情報を表示する
+</a><a href=https://tomonorimatsumura.github.io/blog/p140/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-12 12:06:45 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-12
+</time>WordPressで改行する
+</a><a href=https://tomonorimatsumura.github.io/blog/p118/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-12 11:31:50 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-12
+</time>Windows7 + XAMPPでPerlを使う
+</a><a href=https://tomonorimatsumura.github.io/blog/p116/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-11 18:17:03 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-11
+</time>Linuxでの文字列の検索
+</a><a href=https://tomonorimatsumura.github.io/blog/p97/ class=collection-item itemprop=url target=_blank><time datetime="2012-11-09 12:14:31 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-11-09
+</time>CentOS6にGIMPをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p43/ class=collection-item itemprop=url target=_blank><time datetime="2012-10-28 10:54:31 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-10-28
+</time>CentOSにFastCGIをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p31/ class=collection-item itemprop=url target=_blank><time datetime="2012-10-28 04:35:33 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-10-28
+</time>Apacheでmod_status.soを有効にする
+</a><a href=https://tomonorimatsumura.github.io/blog/p27/ class=collection-item itemprop=url target=_blank><time datetime="2012-10-27 12:18:42 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-10-27
+</time>CentOS6でApacheの設定
+</a><a href=https://tomonorimatsumura.github.io/blog/p13/ class=collection-item itemprop=url target=_blank><time datetime="2012-10-25 10:37:11 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-10-25
+</time>CentOS6.3にRuby1.9をインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p5/ class=collection-item itemprop=url target=_blank><time datetime="2012-10-04 08:51:41 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-10-04
+</time>さくらのVPSでSSHの初期設定を行う
+</a><a href=https://tomonorimatsumura.github.io/blog/p335/ class=collection-item itemprop=url target=_blank><time datetime="2012-07-08 10:29:23 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-07-08
+</time>Windows XP sp3でのEclipse + PHPUnitに関する覚書
+</a><a href=https://tomonorimatsumura.github.io/blog/p235/ class=collection-item itemprop=url target=_blank><time datetime="2012-07-03 08:59:07 +0000 UTC" itemprop=datePublished style=margin-right:5px>2012-07-03
+</time>さくらのレンタルサーバーにTracをインストールする</a></div></div></div></section><section class="panel panel-default b-no"><div class=panel-heading role=tab><h3 class=panel-title><a data-toggle=collapse href=#collapse2011 aria-expanded=true><i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>&nbsp;2011</a></h3></div><div id=collapse2011 class="panel-collapse collapse in" role=tabpanel aria-labelledby=heading2011><div class=panel-body><div class=collection><a href=https://tomonorimatsumura.github.io/blog/p232/ class=collection-item itemprop=url target=_blank><time datetime="2011-11-26 12:09:48 +0000 UTC" itemprop=datePublished style=margin-right:5px>2011-11-26
+</time>スマホサイトに関する覚書き DOCTYPE宣言
+</a><a href=https://tomonorimatsumura.github.io/blog/p229/ class=collection-item itemprop=url target=_blank><time datetime="2011-11-14 11:43:31 +0000 UTC" itemprop=datePublished style=margin-right:5px>2011-11-14
+</time>XAMPPにPerl::Criticをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p220/ class=collection-item itemprop=url target=_blank><time datetime="2011-11-06 06:28:03 +0000 UTC" itemprop=datePublished style=margin-right:5px>2011-11-06
+</time>ＸＡＭＰＰ ver 1.7.3にPHPUnitをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p226/ class=collection-item itemprop=url target=_blank><time datetime="2011-11-02 09:38:17 +0000 UTC" itemprop=datePublished style=margin-right:5px>2011-11-02
+</time>ＸＡＭＰＰにPerltidyをインストールする
+</a><a href=https://tomonorimatsumura.github.io/blog/p238/ class=collection-item itemprop=url target=_blank><time datetime="2011-10-28 15:32:57 +0000 UTC" itemprop=datePublished style=margin-right:5px>2011-10-28
+</time>作業メモ</a></div></div></div></section></div></article></main><footer class=footer itemscope itemtype=http://schema.org/WPFooter><div class=copyright>&copy;&lt;nil> -
+2020<div class=publishby>Theme by <a href=https://github.com/xiaoheiAh target=_blank>xiaoheiAh </a>base on<a href=https://github.com/xiaoheiAh/hugo-theme-pure target=_blank> pure</a>.</div></div></footer><script src=https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js></script><script>window.jQuery||document.write('<script src="js/jquery.min.js"><\/script>')</script><script type=text/javascript src=https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js></script><script>hljs.configure({tabReplace:'    ',classPrefix:''})
+hljs.initHighlightingOnLoad();</script><script src=https://tomonorimatsumura.github.io/blog/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js></script><script src=https://tomonorimatsumura.github.io/blog/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js></script><script>(function(window){var INSIGHT_CONFIG={TRANSLATION:{POSTS:'Posts',PAGES:'Pages',CATEGORIES:'Categories',TAGS:'Tags',UNTITLED:'(Untitled)',},ROOT_URL:'https:\/\/tomonorimatsumura.github.io\/blog\/',CONTENT_URL:'https:\/\/tomonorimatsumura.github.io\/blog\/\/searchindex.json ',};window.INSIGHT_CONFIG=INSIGHT_CONFIG;})(window);</script><script type=text/javascript src=https://tomonorimatsumura.github.io/blog/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js></script><script>tocbot.init({tocSelector:'.js-toc',contentSelector:'.js-toc-content',headingSelector:'h1, h2, h3',hasInnerContainers:true,});</script></body></html>
