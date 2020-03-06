@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Subversion on ソリューションログ</title><link>https://tomonorimatsumura.github.io/blog/categories/subversion/</link><description>Recent content in Subversion on ソリューションログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 13 Dec 2012 13:07:47 +0000</lastBuildDate><atom:link href="https://tomonorimatsumura.github.io/blog/categories/subversion/index.xml" rel="self" type="application/rss+xml"/><item><title>Subversionコマンドメモ</title><link>https://tomonorimatsumura.github.io/blog/p434/</link><pubDate>Thu, 13 Dec 2012 13:07:47 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p434/</guid><description/></item><item><title>CentOS6でSubversionからgitに移行する</title><link>https://tomonorimatsumura.github.io/blog/p290/</link><pubDate>Sun, 02 Dec 2012 11:59:34 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p290/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subversion on ソリューションログ</title>
+    <link>https://tomonorimatsumura.github.io/blog/categories/subversion/</link>
+    <description>Recent content in Subversion on ソリューションログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 13 Dec 2012 13:07:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomonorimatsumura.github.io/blog/categories/subversion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Subversionコマンドメモ</title>
+      <link>https://tomonorimatsumura.github.io/blog/p434/</link>
+      <pubDate>Thu, 13 Dec 2012 13:07:47 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p434/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS6でSubversionからgitに移行する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p290/</link>
+      <pubDate>Sun, 02 Dec 2012 11:59:34 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p290/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

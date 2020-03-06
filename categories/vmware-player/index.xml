@@ -1,1 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VMware Player on ソリューションログ</title><link>https://tomonorimatsumura.github.io/blog/categories/vmware-player/</link><description>Recent content in VMware Player on ソリューションログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 01 May 2014 15:21:43 +0000</lastBuildDate><atom:link href="https://tomonorimatsumura.github.io/blog/categories/vmware-player/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS6.5にVMWare Playerをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p938/</link><pubDate>Thu, 01 May 2014 15:21:43 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p938/</guid><description/></item><item><title>CentOS6.3にVMware Playerをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p618/</link><pubDate>Tue, 22 Jan 2013 05:37:29 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p618/</guid><description/></item><item><title>Windows7にVMware Player + CentOS6.3をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p535/</link><pubDate>Thu, 03 Jan 2013 09:01:31 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p535/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VMware Player on ソリューションログ</title>
+    <link>https://tomonorimatsumura.github.io/blog/categories/vmware-player/</link>
+    <description>Recent content in VMware Player on ソリューションログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 01 May 2014 15:21:43 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomonorimatsumura.github.io/blog/categories/vmware-player/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS6.5にVMWare Playerをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p938/</link>
+      <pubDate>Thu, 01 May 2014 15:21:43 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p938/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS6.3にVMware Playerをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p618/</link>
+      <pubDate>Tue, 22 Jan 2013 05:37:29 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p618/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows7にVMware Player &#43; CentOS6.3をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p535/</link>
+      <pubDate>Thu, 03 Jan 2013 09:01:31 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p535/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

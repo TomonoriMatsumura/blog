@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gnome on ソリューションログ</title><link>https://tomonorimatsumura.github.io/blog/tags/gnome/</link><description>Recent content in gnome on ソリューションログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 29 Oct 2015 13:39:57 +0000</lastBuildDate><atom:link href="https://tomonorimatsumura.github.io/blog/tags/gnome/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7でGnome Terminalにショートカットキーを設定する</title><link>https://tomonorimatsumura.github.io/blog/p1030/</link><pubDate>Thu, 29 Oct 2015 13:39:57 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1030/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gnome on ソリューションログ</title>
+    <link>https://tomonorimatsumura.github.io/blog/tags/gnome/</link>
+    <description>Recent content in gnome on ソリューションログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 29 Oct 2015 13:39:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomonorimatsumura.github.io/blog/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS7でGnome Terminalにショートカットキーを設定する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1030/</link>
+      <pubDate>Thu, 29 Oct 2015 13:39:57 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1030/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

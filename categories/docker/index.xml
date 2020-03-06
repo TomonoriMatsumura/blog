@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on ソリューションログ</title><link>https://tomonorimatsumura.github.io/blog/categories/docker/</link><description>Recent content in Docker on ソリューションログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 02 Feb 2016 17:25:23 +0000</lastBuildDate><atom:link href="https://tomonorimatsumura.github.io/blog/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7でDockerを使いRedmineを立ち上げる</title><link>https://tomonorimatsumura.github.io/blog/p1165/</link><pubDate>Tue, 02 Feb 2016 17:25:23 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1165/</guid><description/></item><item><title>Dockerでコンテナの名前を調べる</title><link>https://tomonorimatsumura.github.io/blog/p1106/</link><pubDate>Sat, 19 Dec 2015 19:05:22 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1106/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on ソリューションログ</title>
+    <link>https://tomonorimatsumura.github.io/blog/categories/docker/</link>
+    <description>Recent content in Docker on ソリューションログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 02 Feb 2016 17:25:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomonorimatsumura.github.io/blog/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS7でDockerを使いRedmineを立ち上げる</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1165/</link>
+      <pubDate>Tue, 02 Feb 2016 17:25:23 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1165/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerでコンテナの名前を調べる</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1106/</link>
+      <pubDate>Sat, 19 Dec 2015 19:05:22 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1106/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

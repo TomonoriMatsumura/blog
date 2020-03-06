@@ -1,11 +1,93 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1"><title>Redmine2.4をCentOS6.4にインストールする - ソリューションログ</title><style type=text/css>img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:0 0!important;padding:0!important}</style><link rel=stylesheet href=https://tomonorimatsumura.github.io/blog/css/style.css type=text/css media=all><link rel=stylesheet href=https://tomonorimatsumura.github.io/blog/css/custom.css type=text/css media=all></head><body class=two-column><a href=#content>Skip to content</a><div class=wrapper><header role=banner class="banner widgets columns-1"><a href=/blog rel=home><h1 class=site>ソリューションログ22</h1><p></p></a><nav role=navigation aria-label="Primary Navigation"><ul class=menu><li class=menu-item><a class=menu__link href=/blog/about/>ABOUT</a></li></ul><select onchange="location.href=value;">
-<option value=/blog/about/ class="menu-item menu-item-type-custom menu-item-object-custom">ABOUT</option></select></nav></header><br><div style=width:100%;max-height:100px;text-align:center></div><div class=breadcrumbs></div><div id=content class=content><main role=main><article role=article class="post type-post format-standard hentry"><header class=post-header><h1>Redmine2.4をCentOS6.4にインストールする</h1><div class=post-details><a rel=bookmark><time datetime=2014-01-01T11:542:186>2014-01-01</time></a>
-<span style=float:right><div id=fb-root style=height:100%></div><script async defer crossorigin=anonymous src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script><div class=fb-share-button data-href=https://tomonorimatsumura.github.io/blog/p914/ data-layout=button_count data-size=small><a target=_blank href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftomonorimatsumura.github.io%2fblog%2fp914%2f" class=fb-xfbml-parse-ignore>Share</a></div>&nbsp;
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-text=Redmine2.4をCentOS6.4にインストールする data-url=https://tomonorimatsumura.github.io/blog/p914/ data-show-count=false>Tweet</a>
-<script async src=https://platform.twitter.com/widgets.js></script>&nbsp;</span></div></header><div class=post-content><p>Redmine、CentOSのバージョンが上がったのでインストール手順を再確認する。</p><h3 id=selinuxを無効にする>SELinuxを無効にする</h3><pre><code class=language-:bash data-lang=:bash>vi /etc/sysconfig/selinux
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <title>Redmine2.4をCentOS6.4にインストールする - ソリューションログ</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='https://tomonorimatsumura.github.io/blog/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://tomonorimatsumura.github.io/blog/css/custom.css' type='text/css' media='all' />
+        
+</head>
+    <body class="two-column">
+        <a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/blog" rel="home">
+            <h1 class="site">ソリューションログ22</h1>
+            <p></p>
+        </a>
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                <li class="menu-item "><a class="menu__link" href="/blog/about/">ABOUT</a></li>
+            </ul>
+            <select onChange="location.href=value;">
+                <option value="/blog/about/" class="menu-item menu-item-type-custom menu-item-object-custom" >ABOUT</option>
+            </select>
+        </nav>
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+</div>
+
+    <div class="breadcrumbs">
+        
+    </div>
+
+        <div id="content" class="content">
+
+<main role="main">
+    <article role="article" class="post type-post format-standard hentry">
+        <header class="post-header">
+            <h1>Redmine2.4をCentOS6.4にインストールする</h1>
+            <div class="post-details">
+                <a rel="bookmark">
+                    <time datetime="2014-01-01T11:542:186">2014-01-01</time>
+                </a>
+				
+<span style="float: right;">
+    <div id="fb-root" style="height: 100%;"></div>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <div class="fb-share-button" data-href="https://tomonorimatsumura.github.io/blog/p914/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftomonorimatsumura.github.io%2fblog%2fp914%2f" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+    &nbsp;
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Redmine2.4をCentOS6.4にインストールする" data-url="https://tomonorimatsumura.github.io/blog/p914/" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    &nbsp;
+    
+</span>
+
+            </div>
+        </header>
+
+        <div class="post-content">
+            <p>Redmine、CentOSのバージョンが上がったのでインストール手順を再確認する。</p>
+<h3 id="selinuxを無効にする">SELinuxを無効にする</h3>
+<pre><code class="language-:bash" data-lang=":bash">vi /etc/sysconfig/selinux
 SELINUX=disabled
 reboot
-</code></pre><h3 id=iptablesでhttpを許可する>iptablesでHTTPを許可する</h3><pre><code class=language-:bash data-lang=:bash>vi /etc/sysconfig/iptables
+</code></pre><h3 id="iptablesでhttpを許可する">iptablesでHTTPを許可する</h3>
+<pre><code class="language-:bash" data-lang=":bash">vi /etc/sysconfig/iptables
 
 # Firewall configuration written by system-config-firewall
 # Manual customization of this file is not recommended.
@@ -27,7 +109,9 @@ COMMIT
 
 # iptablesを再起動する
 service iptables restart
-</code></pre><h3 id=centosパッケージの追加インストール>CentOSパッケージの追加インストール</h3><p>yumで追加インストール</p><pre><code class=language-:bash data-lang=:bash># EPELをインストール
+</code></pre><h3 id="centosパッケージの追加インストール">CentOSパッケージの追加インストール</h3>
+<p>yumで追加インストール</p>
+<pre><code class="language-:bash" data-lang=":bash"># EPELをインストール
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 # 開発ツールをインストール
@@ -41,15 +125,18 @@ yum install httpd httpd-devel
 # ImageMagickとヘッダファイル・日本語フォント
 yum install ImageMagick ImageMagick-devel
 yum install ipa-pgothic-fonts
-</code></pre><h3 id=ruby-200をインストールする>Ruby 2.0.0をインストールする</h3><pre><code class=language-:bash data-lang=:bash>cd /usr/local/src
+</code></pre><h3 id="ruby-200をインストールする">Ruby 2.0.0をインストールする</h3>
+<pre><code class="language-:bash" data-lang=":bash">cd /usr/local/src
 wget ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.gz
 tar zxvf ruby-2.0.0-p353.tar.gz
 cd ruby-2.0.0-p353
 ./configure --disable-install-doc
 make
 make install
-</code></pre><h3 id=bundlerをインストールする>bundlerをインストールする</h3><pre><code class=language-:bash data-lang=:bash>gem install bundler --no-rdoc --no-ri
-</code></pre><h3 id=データベースの設定を確認する>データベースの設定を確認する</h3><pre><code class=language-:bash data-lang=:bash>vi /etc/my.cnf
+</code></pre><h3 id="bundlerをインストールする">bundlerをインストールする</h3>
+<pre><code class="language-:bash" data-lang=":bash">gem install bundler --no-rdoc --no-ri
+</code></pre><h3 id="データベースの設定を確認する">データベースの設定を確認する</h3>
+<pre><code class="language-:bash" data-lang=":bash">vi /etc/my.cnf
 [mysqld]
 datadir=/var/lib/mysql
 socket=/var/lib/mysql/mysql.sock
@@ -73,7 +160,8 @@ default-character-set=utf8
 #mysqlを再起動する
 service mysqld start
 chkconfig mysqld on
-</code></pre><h4 id=etcmycnf-への設定が反映されていることの確認>/etc/my.cnf への設定が反映されていることの確認</h4><pre><code class=language-:bash data-lang=:bash>mysql -uroot
+</code></pre><h4 id="etcmycnf-への設定が反映されていることの確認">/etc/my.cnf への設定が反映されていることの確認</h4>
+<pre><code class="language-:bash" data-lang=":bash">mysql -uroot
 mysql&amp;gt; show variables like &quot;character_set%&quot;;
 +--------------------------+----------------------------+
 | Variable_name            | Value                      |
@@ -90,44 +178,65 @@ mysql&amp;gt; show variables like &quot;character_set%&quot;;
 8 rows in set (0.00 sec)
 
 mysql&amp;gt; exit
-</code></pre><h4 id=rootユーザーのパスワード変更匿名ユーザー削除>rootユーザーのパスワード変更・匿名ユーザー削除</h4><pre><code class=language-:bash data-lang=:bash>mysql -uroot
+</code></pre><h4 id="rootユーザーのパスワード変更匿名ユーザー削除">rootユーザーのパスワード変更・匿名ユーザー削除</h4>
+<pre><code class="language-:bash" data-lang=":bash">mysql -uroot
 mysql&amp;gt; use mysql;
 mysql&amp;gt; update user set password=password(&quot;********&quot;) where user = &quot;root&quot;;
 mysql&amp;gt; delete from user where user = &quot;&quot;;
 mysql&amp;gt; flush privileges;
 mysql&amp;gt; exit;
-</code></pre><h4 id=redmine用データベースとユーザーを作成する>Redmine用データベースとユーザーを作成する</h4><pre><code class=language-:bash data-lang=:bash>mysql -uroot -p
+</code></pre><h4 id="redmine用データベースとユーザーを作成する">Redmine用データベースとユーザーを作成する</h4>
+<pre><code class="language-:bash" data-lang=":bash">mysql -uroot -p
 mysql&amp;gt; create database redmine default character set utf8;
 mysql&amp;gt; GRANT ALL PRIVILEGES ON redmine.* TO &quot;redmine&quot;@&quot;localhost&amp;#039 IDENTIFIED BY &quot;パスワード&quot;;
 mysql&amp;gt; flush privileges;
 mysql&amp;gt; exit;
-</code></pre><h3 id=redmineをインストールする>Redmineをインストールする</h3><pre><code class=language-:bash data-lang=:bash>cd /var/lib
+</code></pre><h3 id="redmineをインストールする">Redmineをインストールする</h3>
+<pre><code class="language-:bash" data-lang=":bash">cd /var/lib
 svn checkout http://svn.redmine.org/redmine/branches/2.4-stable redmine
-</code></pre><h3 id=redmineの設定ファイルを作成する>Redmineの設定ファイルを作成する</h3><p>設定ファイルはシンボリックリンクではなく、Redmine本体に作成する事。</p><h4 id=データベース接続設定>データベース接続設定</h4><p>**『/path/to/redmine/config/database.yml』**を作成。</p><pre><code class=language-:bash data-lang=:bash>production:
+</code></pre><h3 id="redmineの設定ファイルを作成する">Redmineの設定ファイルを作成する</h3>
+<p>設定ファイルはシンボリックリンクではなく、Redmine本体に作成する事。</p>
+<h4 id="データベース接続設定">データベース接続設定</h4>
+<p>**『/path/to/redmine/config/database.yml』**を作成。</p>
+<pre><code class="language-:bash" data-lang=":bash">production:
       adapter: mysql2
       database: redmine
       host: localhost
       username: redmine
       password: foobar
       encoding: utf8  
-</code></pre><p>下線部は、MySQLの設定で使用した名前に合わせます。</p><h4 id=メール送信設定>メール送信設定</h4><p>**『/path/to/redmine/config/configuration.yml』**を作成。メール送信の設定は、環境によって異なる。以下は認証不要のSMPTサーバーの場合。</p><pre><code class=language-:bash data-lang=:bash>production:
+</code></pre><p>下線部は、MySQLの設定で使用した名前に合わせます。</p>
+<h4 id="メール送信設定">メール送信設定</h4>
+<p>**『/path/to/redmine/config/configuration.yml』**を作成。メール送信の設定は、環境によって異なる。以下は認証不要のSMPTサーバーの場合。</p>
+<pre><code class="language-:bash" data-lang=":bash">production:
       email_delivery:
         delivery_method: :smtp
         smtp_settings:
           address: &quot;localhost&quot;
           port: 25
           domain: &quot;example.com&quot;
-</code></pre><h3 id=redmineが使用するgemパッケージのインストールする>Redmineが使用するgemパッケージのインストールする</h3><p>Rubyのgemとは別にインストールする必要があるらしい。</p><pre><code class=language-:bash data-lang=:bash>cd /var/lib/redmine
+</code></pre><h3 id="redmineが使用するgemパッケージのインストールする">Redmineが使用するgemパッケージのインストールする</h3>
+<p>Rubyのgemとは別にインストールする必要があるらしい。</p>
+<pre><code class="language-:bash" data-lang=":bash">cd /var/lib/redmine
 bundle install --without development test
-</code></pre><h3 id=redmineを初期化する>Redmineを初期化する</h3><h4 id=セッションデータの暗号化の鍵生成>セッションデータの暗号化の鍵生成</h4><pre><code class=language-:bash data-lang=:bash>cd /var/lib/redmine-2.2.0
+</code></pre><h3 id="redmineを初期化する">Redmineを初期化する</h3>
+<h4 id="セッションデータの暗号化の鍵生成">セッションデータの暗号化の鍵生成</h4>
+<pre><code class="language-:bash" data-lang=":bash">cd /var/lib/redmine-2.2.0
 bundle exec rake generate_secret_token
-</code></pre><h4 id=データベースを初期構築>データベースを初期構築</h4><p>データベースの初期構築コマンドを発行する前にMySQLの起動を忘れずに行う。</p><pre><code class=language-:bash data-lang=:bash>service mysqld start
+</code></pre><h4 id="データベースを初期構築">データベースを初期構築</h4>
+<p>データベースの初期構築コマンドを発行する前にMySQLの起動を忘れずに行う。</p>
+<pre><code class="language-:bash" data-lang=":bash">service mysqld start
 RAILS_ENV=production bundle exec rake db:migrate
-</code></pre><h3 id=redmineの動作確認をする>Redmineの動作確認をする</h3><p>上記の手順通りRedmineを設定したら、とりあえず起動してみる。</p><pre><code class=language-:bash data-lang=:bash># Apacheを起動する
+</code></pre><h3 id="redmineの動作確認をする">Redmineの動作確認をする</h3>
+<p>上記の手順通りRedmineを設定したら、とりあえず起動してみる。</p>
+<pre><code class="language-:bash" data-lang=":bash"># Apacheを起動する
 httpd -k start
 # WEBrick起動する
 ruby /var/lib/redmine/script/rails server webrick -e production
-</code></pre><p><a href=http://localhost:3000>http://localhost:3000</a>に接続し、Redmine画面が表示されたら正常。</p><h3 id=passengerをインストールする>Passengerをインストールする</h3><p>Apache上でRedmineなどのRailsアプリケーションの実行に必要なPhusion Passengerをインストールする</p><pre><code class=language-:bash data-lang=:bash>gem install passenger --no-rdoc --no-ri
+</code></pre><p><a href="http://localhost:3000">http://localhost:3000</a>に接続し、Redmine画面が表示されたら正常。</p>
+<h3 id="passengerをインストールする">Passengerをインストールする</h3>
+<p>Apache上でRedmineなどのRailsアプリケーションの実行に必要なPhusion Passengerをインストールする</p>
+<pre><code class="language-:bash" data-lang=":bash">gem install passenger --no-rdoc --no-ri
 
 passenger-install-apache2-module
 
@@ -150,7 +259,8 @@ applications on Apache, without any further Ruby on Rails-specific
 configuration!
 
 Press ENTER to continue.
-</code></pre><h4 id=apacheの設定を行う>Apacheの設定を行う</h4><pre><code class=language-:bash data-lang=:bash>vi /etc/httpd/conf.d/passenger.conf
+</code></pre><h4 id="apacheの設定を行う">Apacheの設定を行う</h4>
+<pre><code class="language-:bash" data-lang=":bash">vi /etc/httpd/conf.d/passenger.conf
 
 
 # Passengerの基本設定。
@@ -180,7 +290,8 @@ RailsAppSpawnerIdleTime 86400
 
 service httpd start
 chkconfig httpd on
-</code></pre><h4 id=apache上のpassengerでredmineを実行するための設定をする>Apache上のPassengerでRedmineを実行するための設定をする</h4><pre><code class=language-:bash data-lang=:bash>chown -R apache:apache /var/lib/redmine
+</code></pre><h4 id="apache上のpassengerでredmineを実行するための設定をする">Apache上のPassengerでRedmineを実行するための設定をする</h4>
+<pre><code class="language-:bash" data-lang=":bash">chown -R apache:apache /var/lib/redmine
 
 ln -s /var/lib/redmine/public /var/www/html/redmine
 
@@ -191,4 +302,239 @@ RackBaseURI /redmine
 
 service httpd configtest
 service httpd graceful
-</code></pre><h3 id=参考サイト>参考サイト</h3><ul><li><a href=http://blog.redmine.jp/articles/2_4/installation_centos/>Redmine 2.4をCentOS 6.4にインストールする手順 | Redmine.JP Blog</a></li></ul></div><footer class=post-footer><span class=post-categories><a href=https://tomonorimatsumura.github.io/blog/categories/redmine/>Redmine</a>&emsp;</span></footer><table cellspacing=15 style=width:100%;border:none><tr><td style=text-align:center;border:none;padding:0></td><td style=text-align:center;border:none;padding:0></td></tr></table></article><nav class="navigation post-navigation" role=navigation><div class=nav-links><div class=nav-previous><a class=previous href=https://tomonorimatsumura.github.io/blog/p907/>Virtual BoxにインストールしたCentOS6.4でネットワークを設定する</a></div><div class=nav-next><a class=next href=https://tomonorimatsumura.github.io/blog/p930/>PHPを再インストールする</a></div></div></nav><section></section></main><div class="sidebar1 widgets columns-1"><aside></aside><aside class="widget widget_categories"><h2></h2><ul class=widget__list><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/ansible/>Ansible (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/apache/>Apache (9)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/awk/>awk (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/centos6/>CentOS6 (40)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/centos7/>CentOS7 (26)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/chrome/>Chrome (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/chromium/>Chromium (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/docker/>Docker (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/eclipse/>Eclipse (10)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/epel/>EPEL (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/fastcgi/>FastCGI (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/ffmpeg/>ffmpeg (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/filezilla/>FileZilla (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/firefox/>FireFox (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/freebsd/>FreeBSD (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/ftp/>FTP (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/gimp/>GIMP (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/git/>Git (11)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/imagemagic/>ImageMagic (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/iphone/>iPhone (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/javascript/>JavaScript (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/jenkins/>Jenkins (5)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/libreoffice/>LibreOffice (5)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/linux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/>Linuxコマンド (7)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/mysql/>MySQL (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/nvidia/>nVIDIA (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/owncloud/>owncloud (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/pdf/>PDF (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/pear/>PEAR (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/pecl/>PECL (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/perl/>Perl (6)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/php/>PHP (8)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/phpmyadmin/>phpMyAdmin (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/phpunit/>PHPUnit (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/poderosa/>Poderosa (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/python/>Python (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/rails/>Rails (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/rar/>rar (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/redmine/>Redmine (12)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/remi/>Remi (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/ruby/>Ruby (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/sed/>sed (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/selenium/>Selenium (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/ssh/>SSH (8)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/subversion/>Subversion (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/trac/>Trac (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/unzip/>unzip (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/vagrant/>vagrant (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/virtual-box/>Virtual Box (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/vmware-player/>VMware Player (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/vnc/>VNC (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/windows-xp/>Windows XP (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/windwos-7/>Windwos 7 (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/wordpress/>WordPress (4)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/xampp/>XAMPP (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AEvps/>さくらのVPS (8)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89/>さくらのスタンダード (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/>シェルスクリプト (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3/>スマートフォン (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/>セキュリティ (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%83%A1%E3%83%A2/>メモ (2)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E8%A7%A3%E5%83%8F%E5%BA%A6/>モニター解像度 (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E6%9C%AA%E5%88%86%E9%A1%9E/>未分類 (3)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E9%96%8B%E7%99%BA%E3%83%A1%E3%83%A2/>開発メモ (1)</a></li><li class="cat-item cat-item-2"><a href=https://tomonorimatsumura.github.io/blog/categories/%E9%96%8B%E7%99%BA%E6%94%AF%E6%8F%B4%E3%83%84%E3%83%BC%E3%83%AB/>開発支援ツール (1)</a></li></ul></aside><aside class="widget widget_tag_cloud"><h2></h2><div class=tagcloud><a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/.htaccess/ title=.htaccess style=font-size:12pt>.htaccess</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/apache/ title=apache style=font-size:12pt>apache</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/centos/ title=centos style=font-size:12pt>CentOS</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/cpan/ title=cpan style=font-size:12pt>cpan</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/cron/ title=cron style=font-size:12pt>cron</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/eclipse-perl-integration/ title=eclipse-perl-integration style=font-size:12pt>Eclipse Perl Integration</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/epic/ title=epic style=font-size:12pt>EPIC</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/gnome/ title=gnome style=font-size:12pt>gnome</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/httpd.conf/ title=httpd.conf style=font-size:12pt>httpd.conf</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/mod_fastcgi/ title=mod_fastcgi style=font-size:12pt>mod_fastcgi</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/mod_status.so/ title=mod_status.so style=font-size:12pt>mod_status.so</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/mysql/ title=mysql style=font-size:12pt>mysql</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/openssh/ title=openssh style=font-size:12pt>OpenSSH</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/perltidy/ title=perltidy style=font-size:12pt>Perltidy</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/remi/ title=remi style=font-size:12pt>Remi</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/ruby/ title=ruby style=font-size:12pt>ruby</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/tar/ title=tar style=font-size:12pt>tar</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/terminal/ title=terminal style=font-size:12pt>terminal</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/uname/ title=uname style=font-size:12pt>uname</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/yaml/ title=yaml style=font-size:12pt>YAML</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/%E5%85%AC%E9%96%8B%E3%82%AD%E3%83%BC/ title=公開キー style=font-size:12pt>公開キー</a>&emsp;<a class=tag-cloud-link href=https://tomonorimatsumura.github.io/blog/tags/%E7%A7%98%E5%AF%86%E3%82%AD%E3%83%BC/ title=秘密キー style=font-size:12pt>秘密キー</a>&emsp;</div></aside><aside class="widget widget_recent_entries"><h2></h2><ul></ul></aside><aside class="widget widget_archive"><h2></h2><ul></ul></aside></div></div></div><footer role=contentinfo class="document-footer contentinfo widgets columns-1"><aside class="widget widget_text"><div class=textwidget><p>© ソリューションログ / Powered by <a href=https://gohugo.io target=_blank>Hugo</a> with theme <a href=https://github.com/tosi29/inkblotty target=_blank>Inkblotty</a></p></div></aside></footer></div></body></html>
+</code></pre><h3 id="参考サイト">参考サイト</h3>
+<ul>
+<li><a href="http://blog.redmine.jp/articles/2_4/installation_centos/">Redmine 2.4をCentOS 6.4にインストールする手順 | Redmine.JP Blog</a> <!-- raw HTML omitted --></li>
+</ul>
+
+        </div>
+
+
+
+        <footer class="post-footer">
+                
+                
+                
+                <span class="post-categories">
+                        <a href="https://tomonorimatsumura.github.io/blog/categories/redmine/">Redmine</a>&emsp;
+                        
+                </span>
+                
+        
+                
+                
+                
+        </footer>
+        
+<table cellspacing="15" style="width:100%; border: none;">
+    <tr>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+        <td style="text-align: center; border: none; padding: 0px;">
+        </td>
+    </tr>
+</table>
+
+        
+	
+	
+
+    </article>
+
+    
+    <nav class="navigation post-navigation" role="navigation">
+        <div class="nav-links">
+            <div class="nav-previous">
+                
+                <a class="previous" href="https://tomonorimatsumura.github.io/blog/p907/"> Virtual BoxにインストールしたCentOS6.4でネットワークを設定する</a>
+                
+            </div>
+            <div class="nav-next">
+                
+                <a class="next" href="https://tomonorimatsumura.github.io/blog/p930/"> PHPを再インストールする</a>
+                
+            </div>
+        </div>
+    </nav>
+    <section>
+        
+    </section>
+    
+
+</main>
+
+
+        <div class="sidebar1 widgets columns-1">
+
+    <aside>
+    
+</aside>
+    <aside class="widget widget_categories">
+        <h2></h2>
+        <ul class="widget__list"><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/ansible/">Ansible (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/apache/">Apache (9)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/awk/">awk (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/centos6/">CentOS6 (40)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/centos7/">CentOS7 (26)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/chrome/">Chrome (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/chromium/">Chromium (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/docker/">Docker (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/eclipse/">Eclipse (10)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/epel/">EPEL (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/fastcgi/">FastCGI (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/ffmpeg/">ffmpeg (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/filezilla/">FileZilla (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/firefox/">FireFox (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/freebsd/">FreeBSD (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/ftp/">FTP (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/gimp/">GIMP (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/git/">Git (11)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/imagemagic/">ImageMagic (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/iphone/">iPhone (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/javascript/">JavaScript (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/jenkins/">Jenkins (5)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/libreoffice/">LibreOffice (5)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/linux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/">Linuxコマンド (7)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/mysql/">MySQL (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/nvidia/">nVIDIA (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/owncloud/">owncloud (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/pdf/">PDF (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/pear/">PEAR (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/pecl/">PECL (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/perl/">Perl (6)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/php/">PHP (8)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/phpmyadmin/">phpMyAdmin (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/phpunit/">PHPUnit (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/poderosa/">Poderosa (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/python/">Python (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/rails/">Rails (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/rar/">rar (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/redmine/">Redmine (12)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/remi/">Remi (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/ruby/">Ruby (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/sed/">sed (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/selenium/">Selenium (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/ssh/">SSH (8)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/subversion/">Subversion (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/trac/">Trac (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/unzip/">unzip (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/vagrant/">vagrant (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/virtual-box/">Virtual Box (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/vmware-player/">VMware Player (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/vnc/">VNC (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/windows-xp/">Windows XP (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/windwos-7/">Windwos 7 (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/wordpress/">WordPress (4)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/xampp/">XAMPP (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AEvps/">さくらのVPS (8)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89/">さくらのスタンダード (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/">シェルスクリプト (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3/">スマートフォン (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/">セキュリティ (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%83%A1%E3%83%A2/">メモ (2)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E8%A7%A3%E5%83%8F%E5%BA%A6/">モニター解像度 (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E6%9C%AA%E5%88%86%E9%A1%9E/">未分類 (3)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E9%96%8B%E7%99%BA%E3%83%A1%E3%83%A2/">開発メモ (1)</a>
+            </li><li class="cat-item cat-item-2">
+                <a href="https://tomonorimatsumura.github.io/blog/categories/%E9%96%8B%E7%99%BA%E6%94%AF%E6%8F%B4%E3%83%84%E3%83%BC%E3%83%AB/">開発支援ツール (1)</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_tag_cloud">
+        <h2></h2>
+        <div class="tagcloud"><a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/.htaccess/" title=".htaccess" style="font-size: 12pt;">.htaccess</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/apache/" title="apache" style="font-size: 12pt;">apache</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/centos/" title="centos" style="font-size: 12pt;">CentOS</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/cpan/" title="cpan" style="font-size: 12pt;">cpan</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/cron/" title="cron" style="font-size: 12pt;">cron</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/eclipse-perl-integration/" title="eclipse-perl-integration" style="font-size: 12pt;">Eclipse Perl Integration</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/epic/" title="epic" style="font-size: 12pt;">EPIC</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/gnome/" title="gnome" style="font-size: 12pt;">gnome</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/httpd.conf/" title="httpd.conf" style="font-size: 12pt;">httpd.conf</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/mod_fastcgi/" title="mod_fastcgi" style="font-size: 12pt;">mod_fastcgi</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/mod_status.so/" title="mod_status.so" style="font-size: 12pt;">mod_status.so</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/mysql/" title="mysql" style="font-size: 12pt;">mysql</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/openssh/" title="openssh" style="font-size: 12pt;">OpenSSH</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/perltidy/" title="perltidy" style="font-size: 12pt;">Perltidy</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/remi/" title="remi" style="font-size: 12pt;">Remi</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/ruby/" title="ruby" style="font-size: 12pt;">ruby</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/tar/" title="tar" style="font-size: 12pt;">tar</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/terminal/" title="terminal" style="font-size: 12pt;">terminal</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/uname/" title="uname" style="font-size: 12pt;">uname</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/yaml/" title="yaml" style="font-size: 12pt;">YAML</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/%E5%85%AC%E9%96%8B%E3%82%AD%E3%83%BC/" title="公開キー" style="font-size: 12pt;">公開キー</a>&emsp;<a class="tag-cloud-link" href="https://tomonorimatsumura.github.io/blog/tags/%E7%A7%98%E5%AF%86%E3%82%AD%E3%83%BC/" title="秘密キー" style="font-size: 12pt;">秘密キー</a>&emsp;
+        </div>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+    <aside class="widget widget_archive">
+        <h2></h2>
+        <ul>
+        </ul>
+    </aside>
+
+</div>
+        </div>
+        </div>
+<footer role="contentinfo" class="document-footer contentinfo widgets columns-1">
+
+    <aside class="widget widget_text">
+        <div class="textwidget">
+            <p>© ソリューションログ / Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/tosi29/inkblotty" target="_blank">Inkblotty</a></p>
+        </div>
+    </aside>
+</footer>
+</div>
+
+    </body>
+</html>

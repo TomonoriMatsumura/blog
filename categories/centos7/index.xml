@@ -1,1 +1,249 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CentOS7 on ソリューションログ</title><link>https://tomonorimatsumura.github.io/blog/categories/centos7/</link><description>Recent content in CentOS7 on ソリューションログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 14 Sep 2017 13:29:22 +0000</lastBuildDate><atom:link href="https://tomonorimatsumura.github.io/blog/categories/centos7/index.xml" rel="self" type="application/rss+xml"/><item><title>CentOS7でJenkinsをバックアップ、リストアする</title><link>https://tomonorimatsumura.github.io/blog/p1320/</link><pubDate>Thu, 14 Sep 2017 13:29:22 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1320/</guid><description/></item><item><title>CentOS7へJenkinsをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1317/</link><pubDate>Thu, 14 Sep 2017 12:51:12 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1317/</guid><description/></item><item><title>CentOS7でRedmineをバックアップ、リストアする</title><link>https://tomonorimatsumura.github.io/blog/p1312/</link><pubDate>Thu, 14 Sep 2017 12:30:57 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1312/</guid><description/></item><item><title>HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1309/</link><pubDate>Mon, 03 Jul 2017 15:09:29 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1309/</guid><description/></item><item><title>Lenovo G580にCentOS7をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1239/</link><pubDate>Sun, 05 Mar 2017 16:20:48 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1239/</guid><description/></item><item><title>Seleniumでコマンドラインでページソースを取得する</title><link>https://tomonorimatsumura.github.io/blog/p1223/</link><pubDate>Tue, 14 Feb 2017 10:48:26 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1223/</guid><description/></item><item><title>Seleniumでコマンドラインでページタイトルを取得する</title><link>https://tomonorimatsumura.github.io/blog/p1216/</link><pubDate>Tue, 14 Feb 2017 10:11:31 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1216/</guid><description/></item><item><title>CentOS7にSeleniuimをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1201/</link><pubDate>Sun, 18 Dec 2016 14:52:57 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1201/</guid><description/></item><item><title>CentOS7にVirtualBox + vagrantをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1174/</link><pubDate>Sun, 06 Mar 2016 11:34:43 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1174/</guid><description/></item><item><title>さくらのVPSにVirtualBox + vagrantをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1168/</link><pubDate>Sun, 06 Mar 2016 11:32:06 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1168/</guid><description/></item><item><title>CentOS7でAnsibleを利用する</title><link>https://tomonorimatsumura.github.io/blog/p1156/</link><pubDate>Wed, 27 Jan 2016 08:15:14 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1156/</guid><description/></item><item><title>CentOS7へRuby2.3とRails4をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1134/</link><pubDate>Mon, 18 Jan 2016 14:22:30 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1134/</guid><description/></item><item><title>CentOS7へownCloudをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1122/</link><pubDate>Tue, 12 Jan 2016 06:48:12 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1122/</guid><description/></item><item><title>CentOS7へNVIDIAグラフィックスドライバをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1117/</link><pubDate>Sat, 02 Jan 2016 11:47:00 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1117/</guid><description/></item><item><title>CentOS7で動画を閲覧する</title><link>https://tomonorimatsumura.github.io/blog/p1113/</link><pubDate>Sat, 02 Jan 2016 10:08:19 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1113/</guid><description/></item><item><title>CentOS7でWindows Zipアーカイブを解凍する</title><link>https://tomonorimatsumura.github.io/blog/p1096/</link><pubDate>Tue, 01 Dec 2015 16:15:05 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1096/</guid><description/></item><item><title>CentOS7でmod_encodingを利用する</title><link>https://tomonorimatsumura.github.io/blog/p1093/</link><pubDate>Tue, 01 Dec 2015 14:37:59 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1093/</guid><description/></item><item><title>CentOS7でSSHを秘密鍵公開鍵を使って設定する</title><link>https://tomonorimatsumura.github.io/blog/p1084/</link><pubDate>Tue, 17 Nov 2015 13:59:06 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1084/</guid><description/></item><item><title>CentOS7でmod_userdirを使用する</title><link>https://tomonorimatsumura.github.io/blog/p1075/</link><pubDate>Mon, 16 Nov 2015 15:38:58 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1075/</guid><description/></item><item><title>CentOS7にFTPサーバを構築する</title><link>https://tomonorimatsumura.github.io/blog/p1067/</link><pubDate>Sun, 08 Nov 2015 10:41:11 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1067/</guid><description/></item><item><title>CentOS7へFilezillaをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1065/</link><pubDate>Sun, 08 Nov 2015 04:03:13 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1065/</guid><description/></item><item><title>さくらのVPSにインストールしたCentOS7でVNCを利用する</title><link>https://tomonorimatsumura.github.io/blog/p1038/</link><pubDate>Thu, 29 Oct 2015 17:09:54 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1038/</guid><description/></item><item><title>CentOS7でGnome Terminalにショートカットキーを設定する</title><link>https://tomonorimatsumura.github.io/blog/p1030/</link><pubDate>Thu, 29 Oct 2015 13:39:57 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1030/</guid><description/></item><item><title>CentOS7にPHP5.6をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1022/</link><pubDate>Tue, 15 Sep 2015 16:57:57 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1022/</guid><description/></item><item><title>CentOS7にffmpegをインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1018/</link><pubDate>Tue, 11 Aug 2015 04:47:03 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1018/</guid><description/></item><item><title>Windows7にVirtualBoxをインストールしCentOS7をインストールする</title><link>https://tomonorimatsumura.github.io/blog/p1003/</link><pubDate>Tue, 11 Aug 2015 03:47:53 +0000</pubDate><guid>https://tomonorimatsumura.github.io/blog/p1003/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CentOS7 on ソリューションログ</title>
+    <link>https://tomonorimatsumura.github.io/blog/categories/centos7/</link>
+    <description>Recent content in CentOS7 on ソリューションログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 14 Sep 2017 13:29:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://tomonorimatsumura.github.io/blog/categories/centos7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS7でJenkinsをバックアップ、リストアする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1320/</link>
+      <pubDate>Thu, 14 Sep 2017 13:29:22 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1320/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7へJenkinsをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1317/</link>
+      <pubDate>Thu, 14 Sep 2017 12:51:12 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1317/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でRedmineをバックアップ、リストアする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1312/</link>
+      <pubDate>Thu, 14 Sep 2017 12:30:57 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1312/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HP Compaq 8100 Elite Small に nVIDIA GeForce GT520 1GB LowProfile を装着し CentOS7をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1309/</link>
+      <pubDate>Mon, 03 Jul 2017 15:09:29 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1309/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lenovo G580にCentOS7をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1239/</link>
+      <pubDate>Sun, 05 Mar 2017 16:20:48 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1239/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seleniumでコマンドラインでページソースを取得する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1223/</link>
+      <pubDate>Tue, 14 Feb 2017 10:48:26 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1223/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seleniumでコマンドラインでページタイトルを取得する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1216/</link>
+      <pubDate>Tue, 14 Feb 2017 10:11:31 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1216/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7にSeleniuimをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1201/</link>
+      <pubDate>Sun, 18 Dec 2016 14:52:57 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1201/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7にVirtualBox &#43; vagrantをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1174/</link>
+      <pubDate>Sun, 06 Mar 2016 11:34:43 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1174/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>さくらのVPSにVirtualBox &#43; vagrantをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1168/</link>
+      <pubDate>Sun, 06 Mar 2016 11:32:06 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1168/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でAnsibleを利用する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1156/</link>
+      <pubDate>Wed, 27 Jan 2016 08:15:14 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1156/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7へRuby2.3とRails4をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1134/</link>
+      <pubDate>Mon, 18 Jan 2016 14:22:30 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1134/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7へownCloudをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1122/</link>
+      <pubDate>Tue, 12 Jan 2016 06:48:12 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1122/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7へNVIDIAグラフィックスドライバをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1117/</link>
+      <pubDate>Sat, 02 Jan 2016 11:47:00 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1117/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7で動画を閲覧する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1113/</link>
+      <pubDate>Sat, 02 Jan 2016 10:08:19 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1113/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でWindows Zipアーカイブを解凍する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1096/</link>
+      <pubDate>Tue, 01 Dec 2015 16:15:05 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1096/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でmod_encodingを利用する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1093/</link>
+      <pubDate>Tue, 01 Dec 2015 14:37:59 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1093/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でSSHを秘密鍵公開鍵を使って設定する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1084/</link>
+      <pubDate>Tue, 17 Nov 2015 13:59:06 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1084/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でmod_userdirを使用する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1075/</link>
+      <pubDate>Mon, 16 Nov 2015 15:38:58 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1075/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7にFTPサーバを構築する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1067/</link>
+      <pubDate>Sun, 08 Nov 2015 10:41:11 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1067/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7へFilezillaをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1065/</link>
+      <pubDate>Sun, 08 Nov 2015 04:03:13 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1065/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>さくらのVPSにインストールしたCentOS7でVNCを利用する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1038/</link>
+      <pubDate>Thu, 29 Oct 2015 17:09:54 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1038/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7でGnome Terminalにショートカットキーを設定する</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1030/</link>
+      <pubDate>Thu, 29 Oct 2015 13:39:57 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1030/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7にPHP5.6をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1022/</link>
+      <pubDate>Tue, 15 Sep 2015 16:57:57 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CentOS7にffmpegをインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1018/</link>
+      <pubDate>Tue, 11 Aug 2015 04:47:03 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows7にVirtualBoxをインストールしCentOS7をインストールする</title>
+      <link>https://tomonorimatsumura.github.io/blog/p1003/</link>
+      <pubDate>Tue, 11 Aug 2015 03:47:53 +0000</pubDate>
+      
+      <guid>https://tomonorimatsumura.github.io/blog/p1003/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
